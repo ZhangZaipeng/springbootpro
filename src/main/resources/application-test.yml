@@ -2,8 +2,37 @@ server:
   port: 8080
   context-path: /hwz
 
+spring:
+  datasource:
+    # driverClassName: com.mysql.jdbc.Driver
+    driverClassName: net.sf.log4jdbc.DriverSpy
+    # url: jdbc:log4jdbc:mysql://localhost:3306/b2b_5?autoReconnect=true&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false
+    url: jdbc:log4jdbc:mysql://localhost:3306/testdb?autoReconnect=true&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false
+    username: root
+    password: 123456
+    filters: stat
+    maxActive: 30
+    initialSize: 5
+    maxWait: 60000
+    minIdle: 5
+    maxIdle: 20
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 1200000
+
+
 cupSize: B
 
 man:
   telephone: 13308629879
   realName: lisi
+
+mybatis:
+  # typeAliasesPackage: com.hwz.**.domain
+  mapperLocations: classpath:/com/hwz/**/mapper/*.ibatis.xml
+  # configLocation: classpath:/mybatis-config.xml
+
+pagehelper:
+    helperDialect: mysql
+    reasonable: true
+    supportMethodsArguments: true
+    params: count=countSql

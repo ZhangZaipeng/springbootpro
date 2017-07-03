@@ -46,6 +46,7 @@
 		</dependency>-->
 		<!-- 1.声明起步依赖：降低项目依赖复杂度 -->
 		<!-- 2.当起步依赖任然有问题 用<exclusions>排除传递依赖  -->
+		<!-- spring.boot  start -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
@@ -61,10 +62,26 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>mybatis-spring-boot-starter</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>org.mybatis.spring.boot</groupId>
+			<artifactId>mybatis-spring-boot-starter</artifactId>
+		</dependency>
+		<!-- spring.boot  end -->
 
+		<!-- DB -->
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
+		</dependency>
+		<!-- mybatis 分页插件 -->
+		<dependency>
+			<groupId>com.github.pagehelper</groupId>
+			<artifactId>pagehelper</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.lazyluke</groupId>
+			<artifactId>log4jdbc-remix</artifactId>
+			<!--<version>0.2.7</version>-->
 		</dependency>
 
 	</dependencies>
