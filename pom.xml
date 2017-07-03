@@ -12,11 +12,11 @@
 	<description>ZhangZaipeng first Spring Boot project</description>
 
 	<!-- 从 spring-boot-starter-parent继承版本号  可以使用不带父节点的pom文件-->
-	<!--<parent>
+	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>1.5.4.RELEASE</version>
-	</parent>-->
+	</parent>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -24,7 +24,7 @@
 		<java.version>1.7</java.version>
 	</properties>
 
-	<dependencyManagement>
+	<!--<dependencyManagement>
 		<dependencies>
 			<dependency>
 				<groupId>org.springframework.boot</groupId>
@@ -34,7 +34,7 @@
 				<scope>import</scope>
 			</dependency>
 		</dependencies>
-	</dependencyManagement>
+	</dependencyManagement>-->
 
 	<dependencies>
 		<!--<dependency>
@@ -60,11 +60,13 @@
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>mybatis-spring-boot-starter</artifactId>
+			<artifactId>spring-boot-starter-aop</artifactId>
 		</dependency>
+		<!-- mybatis -->
 		<dependency>
 			<groupId>org.mybatis.spring.boot</groupId>
 			<artifactId>mybatis-spring-boot-starter</artifactId>
+			<version>1.0.0</version>
 		</dependency>
 		<!-- spring.boot  end -->
 
@@ -73,15 +75,21 @@
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 		</dependency>
-		<!-- mybatis 分页插件 -->
+		<!-- 数据源 -->
 		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>druid</artifactId>
+			<version>1.0.14</version>
+		</dependency>
+		<!-- mybatis 分页插件 -->
+		<!--<dependency>
 			<groupId>com.github.pagehelper</groupId>
 			<artifactId>pagehelper</artifactId>
-		</dependency>
+		</dependency>-->
 		<dependency>
 			<groupId>org.lazyluke</groupId>
 			<artifactId>log4jdbc-remix</artifactId>
-			<!--<version>0.2.7</version>-->
+			<version>0.2.7</version>
 		</dependency>
 
 	</dependencies>

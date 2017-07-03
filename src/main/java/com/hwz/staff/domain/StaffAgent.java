@@ -4,6 +4,11 @@ import java.util.Date;
 
 /**
  * Created by ZhangZaipeng on 2017/7/1.
+ *
+ * import javax.validation.constraints.Min;
+ * @Min(value = 19 , message= "。。。。验证提示")
+ * @Valid
+ * BindingResult bindingResult
  */
 public class StaffAgent {
     private Long staffAgentId;    // '自增长主键',

@@ -18,6 +18,7 @@ spring:
     maxIdle: 20
     timeBetweenEvictionRunsMillis: 60000
     minEvictableIdleTimeMillis: 1200000
+    type: com.alibaba.druid.pool.DruidDataSource
 
 
 cupSize: B
