@@ -1,0 +1,9 @@
+server:
+  port: 8080
+  context-path: /hwz
+
+cupSize: B
+
+man:
+  telephone: 13308629879
+  realName: zhangzaipeng
