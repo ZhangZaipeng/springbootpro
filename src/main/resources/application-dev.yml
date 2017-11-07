@@ -1,7 +1,4 @@
-server:
-  port: 8080
-  context-path: /hwz
-
+# 自定义属性
 cupSize: B
 
 man:

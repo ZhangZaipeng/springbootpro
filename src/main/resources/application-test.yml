@@ -1,15 +1,18 @@
-server:
-  port: 8080
-  context-path: /hwz
+# 自定义属性
+man:
+  telephone: 13308629879
+  realName: lisi
+  servers[0]: kk
+  servers[1]: jj
 
 spring:
   datasource:
     # driverClassName: com.mysql.jdbc.Driver
     driverClassName: net.sf.log4jdbc.DriverSpy
     # url: jdbc:log4jdbc:mysql://localhost:3306/b2b_5?autoReconnect=true&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false
-    url: jdbc:log4jdbc:mysql://localhost:3306/testdb?autoReconnect=true&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false
-    username: root
-    password: 123456
+    url: jdbc:log4jdbc:mysql://mysql.zhangzp.cn:3306/hadoop2?autoReconnect=true&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false
+    username: hadoop2
+    password: hadoop2
     filters: stat
     maxActive: 30
     initialSize: 5
@@ -20,12 +23,25 @@ spring:
     minEvictableIdleTimeMillis: 1200000
     type: com.alibaba.druid.pool.DruidDataSource
 
+  # freemarker 配置
+  freemarker:
+    allow-request-override: false
+    allow-session-override: false
+    check-template-location: true
+    expose-session-attributes: false
+    content-type: text/html
+    expose-request-attributes: false
+    enabled: true
+    charset: UTF-8
+    cache: false
+    template-loader-path: classpath:/templates
+    prefix:
+    suffix:
 
-cupSize: B
+  # 静态资源引用
+  mvc:
+    static-path-pattern: /static/**
 
-man:
-  telephone: 13308629879
-  realName: lisi
 
 mybatis:
   # typeAliasesPackage: com.hwz.**.domain
@@ -37,3 +53,16 @@ pagehelper:
     reasonable: true
     supportMethodsArguments: true
     params: count=countSql
+
+logging:
+  level:
+    root: INFO
+    jdbc.sqltiming: INFO
+    jdbc.audit: 'OFF'
+    jdbc.resultset: 'OFF'
+    jdbc.resultsettable: 'OFF'
+    jdbc.sqlonly: 'OFF'
+    jdbc.connection: 'OFF'
+    org.apache.tomcat.util.net.NioEndpoint: 'OFF'
+    org.springframework.cache.interceptor.CacheInterceptor: TRACE
+    org.springframework.jdbc.datasource.DataSourceTransactionManager: DEBUG

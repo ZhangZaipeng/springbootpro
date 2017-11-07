@@ -10,6 +10,10 @@ import javax.sql.DataSource;
 
 /**
  * Created by ZhangZaipeng on 2017/7/3.
+ * Mybatis 有两种整合方式
+ * 1.在类里面配置参数
+ * 2.在yml文件中配置
+ *
  */
 @Configuration
 @EnableTransactionManagement
