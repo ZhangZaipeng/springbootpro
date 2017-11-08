@@ -132,6 +132,13 @@
 			<version>2.5</version>
 		</dependency>
 
+		<!-- redis -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-redis</artifactId>
+		</dependency>
+
+
 		<!-- swagger -->
 		<dependency>
 			<groupId>io.springfox</groupId>

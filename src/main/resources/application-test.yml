@@ -42,6 +42,15 @@ spring:
   mvc:
     static-path-pattern: /static/**
 
+  # redis
+  redis:
+    host: mysql.zhangzp.cn
+    port: 16379
+    pool:
+      max-idle: 100
+      min-idle: 1
+      max-active: 1000
+      max-wait: -1
 
 mybatis:
   # typeAliasesPackage: com.hwz.**.domain
